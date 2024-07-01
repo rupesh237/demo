@@ -1064,8 +1064,8 @@
           </div>
 
           <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-              data-aos-delay="200">
+            <!-- <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" -->
+            <form   name="submit-to-google-sheet"  data-aos="fade-up">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -1088,10 +1088,10 @@
                   <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
                 </div>
 
-                <div class="col-md-12 text-center">
+                <!-- <div class="col-md-12 text-center">
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div> -->
 
                   <button type="submit">Send Message</button>
                 </div>
@@ -1214,6 +1214,33 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+<!-- <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbytq8VUhY4WvJj7Q9T8t9vGZSPYtzLGIljA43waIZIhMa3VjxPQqIrPtnos7PeDGbZDUA/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script> -->
+<!-- contact form js code -->
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbytq8VUhY4WvJj7Q9T8t9vGZSPYtzLGIljA43waIZIhMa3VjxPQqIrPtnos7PeDGbZDUA/exec';
+  const form = document.forms['submit-to-google-sheet'];
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        console.log('Success!', response);
+        form.reset();  // Reset the form after successful submission
+      })
+      .catch(error => console.error('Error!', error.message));
+  });
+</script>
+<!-- contact form js code -->
 </body>
 
 </html>
