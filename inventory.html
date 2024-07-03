@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .project {
+            background: rgb(20, 218, 208);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            margin: 10px;
+            height: 600px;
+            overflow: hidden;
+            width: 100%;
+        }
+        .project div {
+            flex: 1;
+            align-items: center;
+            align-content: center;
+        }
+        .image-slider {
+            position: relative;
+            width: 200px;
+            overflow: hidden;
+        }
+        .image-slider img {
+            width: 100%;
+            padding-left: 10px;
+            border-radius: 10px;
+            object-fit: contain;
+            display: none; /* Hide all images initially */
+        }
+        .image-slider img.active {
+            display: block; /* Show the active image */
+        }
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .slider-buttons button {
+            background-color: rgba(165, 151, 151, 0.89);
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .project-details {
+            padding-top: 140px;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .project-details h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .project-details p {
+            margin: 10px 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="project">
+            <div class="image-slider">
+                <img src="assets/img/inventory/inventory1.png" alt="Project 1 Image 1" class="active">
+                <img src="assets/img/inventory/inventory2.png" alt="Project 1 Image 2">
+                <img src="assets/img/inventory/inventory3.png" alt="Project 1 Image 3">
+                <img src="assets/img/inventory/inventory4.png" alt="Project 1 Image 4">
+                <img src="assets/img/inventory/inventory5.png" alt="Project 1 Image 5">
+                <img src="assets/img/inventory/inventory6.png" alt="Project 1 Image 6">
+                <img src="assets/img/inventory/inventory7.png" alt="Project 1 Image 7">
+                <img src="assets/img/inventory/inventory8.png" alt="Project 1 Image 8">
+                <div class="slider-buttons">
+                    <button onclick="prevSlide(this)">&#10094;</button>
+                    <button onclick="nextSlide(this)">&#10095;</button>
+                </div>
+            </div>
+            <div class="project-details">
+                <h2>Inventory management system</h2>
+                <p>This is our project inventory Management system.</p>
+            </div>
+        </div>
+        <!-- Repeat for more projects -->
+    </div>
+
+    <script>
+        function nextSlide(button) {
+            const slider = button.parentElement.parentElement;
+            const slides = Array.from(slider.getElementsByTagName('img'));
+            const currentIndex = slides.findIndex(slide => slide.classList.contains('active'));
+            slides[currentIndex].classList.remove('active');
+            const nextIndex = (currentIndex + 1) % slides.length;
+            slides[nextIndex].classList.add('active');
+        }
+
+        function prevSlide(button) {
+            const slider = button.parentElement.parentElement;
+            const slides = Array.from(slider.getElementsByTagName('img'));
+            const currentIndex = slides.findIndex(slide => slide.classList.contains('active'));
+            slides[currentIndex].classList.remove('active');
+            const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+            slides[prevIndex].classList.add('active');
+        }
+    </script>
+</body>
+</html>
