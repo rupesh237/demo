@@ -151,9 +151,6 @@ h6 {
 
   .header .btn-getstarted {
     display: none;
-    order: 2;
-    margin: 0 15px 0 0;
-    padding: 6px 15px;
   }
 
   .header .navmenu {
