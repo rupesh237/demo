@@ -161,7 +161,7 @@ h6 {
 /* Index Page Header
 ------------------------------*/
 .index-page .header {
-  --background-color: rgba(255, 255, 255, 0);
+  --background-color: rgba(40, 58, 90, 0.9);
   --heading-color: #ffffff;
   --nav-color: #ffffff;
 }

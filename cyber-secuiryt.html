@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Crash Course</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .day {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .day h2 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .content {
+            margin-top: 15px;
+            line-height: 1.6;
+        }
+        .content ul {
+            padding-left: 20px;
+        }
+        .content ul li {
+            margin: 5px 0;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Linux Crash Course</h1>
+    </header>
+
+    <div class="container">
+        
+        <div class="day">
+            <h2>Day 1: Introduction to Linux</h2>
+            <div class="content">
+                <ul>
+                    <li>What is Linux?
+                        <ul>
+                            <li>Overview of Linux and its distributions</li>
+                            <li>Differences between Linux and other operating systems</li>
+                            <li>Open-source philosophy</li>
+                        </ul>
+                    </li>
+                    <li>Installation and Setup
+                        <ul>
+                            <li>Installing Linux on a virtual machine (VM) or dual-boot</li>
+                            <li>Introduction to popular distributions (Ubuntu, CentOS, Fedora)</li>
+                            <li>Basic terminal usage</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Repeat similar structure for other days -->
+        
+        <div class="day">
+            <h2>Day 2: Basic Linux Commands</h2>
+            <div class="content">
+                <ul>
+                    <li>Navigating the File System
+                        <ul>
+                            <li>Understanding the directory structure</li>
+                            <li>Commands: <code>pwd</code>, <code>ls</code>, <code>cd</code>, <code>mkdir</code>, <code>rmdir</code>, <code>touch</code>, <code>cp</code>, <code>mv</code>, <code>rm</code></li>
+                        </ul>
+                    </li>
+                    <li>File Permissions and Ownership
+                        <ul>
+                            <li>Understanding <code>ls -l</code> output</li>
+                            <li>Changing permissions with <code>chmod</code></li>
+                            <li>Changing ownership with <code>chown</code> and <code>chgrp</code></li>
+                        </ul>
+                    </li>
+                    <li>Basic File Operations
+                        <ul>
+                            <li>Viewing file contents: <code>cat</code>, <code>less</code>, <code>more</code></li>
+                            <li>Searching files: <code>grep</code></li>
+                            <li>File redirection and piping: <code>&gt;</code>, <code>&gt;&gt;</code>, <code>|</code></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="day">
+            <h2>Day 3: Shell Scripting Basics</h2>
+            <div class="content">
+                <ul>
+                    <li>Introduction to Shell Scripting
+                        <ul>
+                            <li>Creating and running a basic script</li>
+                            <li>Using variables, loops, and conditionals</li>
+                            <li>Common shell built-ins (echo, read, if, for, while, case)</li>
+                        </ul>
+                    </li>
+                    <li>Managing Processes
+                        <ul>
+                            <li>Understanding processes: ps, top</li>
+                            <li>Starting and stopping processes: kill, pkill, &, jobs, fg, bg</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="day">
+            <h2>Day 4: Advanced Command Line Usage</h2>
+            <div class="content">
+                <ul>
+                    <li>Advanced File Manipulation
+                        <ul>
+                            <li>File compression and archiving: tar, gzip, gunzip, zip, unzip</li>
+                            <li>Managing file content: sed, awk, cut, sort, uniq, tr</li>
+                            <li>Finding files: find, locate</li>
+                        </ul>
+                    </li>
+                    <li>Networking Basics
+                        <ul>
+                            <li>Checking network status: ifconfig, ip, ping</li>
+                            <li>Managing network interfaces: ifup, ifdown</li>
+                            <li>Basic network troubleshooting: traceroute, netstat, ss</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="day">
+            <h2>Day 5: User and Group Management</h2>
+            <div class="content">
+                <ul>
+                    <li>User Accounts
+                        <ul>
+                            <li>Creating and managing users: useradd, usermod, userdel</li>
+                            <li>Password management: passwd</li>
+                            <li>User profiles and shell configuration files (.bashrc, .profile)</li>
+                        </ul>
+                    </li>
+                    <li>Group Management
+                        <ul>
+                            <li>Creating and managing groups: groupadd, groupmod, groupdel</li>
+                            <li>Adding users to groups: usermod -aG</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="day">
+            <h2>Day 6: Software Management</h2>
+            <div class="content">
+                <ul>
+                    <li>Package Management
+                        <ul>
+                            <li>Using package managers: apt (Debian/Ubuntu), yum (RHEL/CentOS)</li>
+                            <li>Installing, updating, and removing software</li>
+                            <li>Managing repositories</li>
+                        </ul>
+                    </li>
+                    <li>Building from Source
+                        <ul>
+                            <li>Compiling and installing software from source code</li>
+                            <li>Understanding ./configure, make, make install</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="day">
+            <h2>Day 7: Disk Management</h2>
+            <div class="content">
+                <ul>
+                    <li>Disk Partitioning and Mounting
+                        <ul>
+                            <li>Understanding partitions and file systems</li>
+                            <li>Creating, formatting, and mounting partitions: fdisk, mkfs, mount, umount</li>
+                            <li>Managing swap space</li>
+                        </ul>
+                    </li>
+                    <li>Disk Usage and Quotas
+                        <ul>
+                            <li>Checking disk usage: df, du</li>
+                            <li>Setting up and managing disk quotas</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="day">
+            <h2>Day 8: System Monitoring and Optimization</h2>
+            <div class="content">
+                <ul>
+                    <li>System Resource Monitoring
+                        <ul>
+                            <li>Monitoring CPU and memory usage: top, htop, vmstat</li>
+                            <li>Monitoring disk I/O: iotop, iostat</li>
+                            <li>Monitoring network traffic: nload, iftop</li>
+                        </ul>
+                    </li>
+                    <li>Performance Tuning
+                        <ul>
+                            <li>Understanding and configuring system limits</li>
+                            <li>Optimizing boot process: systemd, systemctl</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="day">
+            <h2>Day 9: Security and Firewall</h2>
+            <div class="content">
+                <ul>
+                    <li>Linux Security Basics
+                        <ul>
+                            <li>Understanding sudo and root privileges</li>
+                            <li>Securing SSH: sshd_config, key-based authentication</li>
+                            <li>Configuring and managing the firewall: iptables, ufw</li>
+                        </ul>
+                    </li>
+                    <li>Auditing and Hardening
+                        <ul>
+                            <li>Checking system logs: dmesg, syslog, journalctl</li>
+                            <li>Common hardening practices (e.g., disabling root login, configuring fail2ban)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="day">
+            <h2>Day 10: Automation and Task Scheduling</h2>
+            <div class="content">
+                <ul>
+                    <li>Cron Jobs
+                        <ul>
+                            <li>Understanding cron and crontab</li>
+                            <li>Scheduling tasks with cron</li>
+                            <li>Managing cron jobs</li>
+                        </ul>
+                    </li>
+                    <li>Systemd Timers
+                        <ul>
+                            <li>Creating and managing systemd timer units</li>
+                            <li>Comparing cron with systemd timers</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="day">
+            <h2>Day 11: Backup and Recovery</h2>
+            <div class="content">
+                <ul>
+                    <li>Backup Strategies
+                        <ul>
+                            <li>Creating backups: rsync, tar, cpio</li>
+                            <li>Automating backups with scripts and cron</li>
+                        </ul>
+                    </li>
+                    <li>Recovery Techniques
+                        <ul>
+                            <li>Understanding and using recovery tools</li>
+                            <li>Managing boot issues: grub, initramfs</li>
+                            <li>Restoring from backups</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="day">
+            <h2>Day 12: Advanced Networking</h2>
+            <div class="content">
+                <ul>
+                    <li>Network Configuration
+                        <ul>
+                            <li>Configuring network interfaces manually</li>
+                            <li>Setting up static and dynamic IP addresses</li>
+                        </ul>
+                    </li>
+                    <li>Advanced SSH Usage
+                        <ul>
+                            <li>Port forwarding, tunneling, and reverse tunneling</li>
+                            <li>Using scp and sftp for file transfers</li>
+                        </ul>
+                    </li>
+                    <li>Network Services
+                        <ul>
+                            <li>Configuring and managing services: systemctl, service</li>
+                            <li>Basic DNS, DHCP, and web server setup</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="day">
+            <h2>Day 13: Virtualization and Containers</h2>
+            <div class="content">
+                <ul>
+                    <li>Introduction to Virtualization
+                        <ul>
+                            <li>Understanding and setting up KVM/QEMU</li>
+                            <li>Managing virtual machines with virsh, virt-manager</li>
+                        </ul>
+                    </li>
+                    <li>Introduction to Containers
+                        <ul>
+                            <li>Setting up and using Docker</li>
+                            <li>Basic Docker commands and concepts: images, containers, volumes, networks</li>
+                            <li>Docker Compose basics</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <!-- Continue for Day 3 to Day 14 -->
+        
+        <div class="day">
+            <h2>Day 14: Advanced Networking</h2>
+            <div class="content">
+                <ul>
+                    <li>Network Configuration
+                        <ul>
+                            <li>Configuring network interfaces manually</li>
+                            <li>Setting up static and dynamic IP addresses</li>
+                        </ul>
+                    </li>
+                    <li>Advanced SSH Usage
+                        <ul>
+                            <li>Port forwarding, tunneling, and reverse tunneling</li>
+                            <li>Using <code>scp</code> and <code>sftp</code> for file transfers</li>
+                        </ul>
+                    </li>
+                    <li>Network Services
+                        <ul>
+                            <li>Configuring and managing services: <code>systemctl</code>, <code>service</code></li>
+                            <li>Basic DNS, DHCP, and web server setup</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+
+    <footer>
+        &copy; 2024 Linux Crash Course - All Rights Reserved
+    </footer>
+
+</body>
+</html>

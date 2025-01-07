@@ -38,6 +38,49 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+.button1 {
+  background-color: #004A7F;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 20px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+@-webkit-keyframes glowing {
+  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -moz-box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+@keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+  </style>
 
   <!-- =======================================================
   * Template Name: M And MB Soft Tech Pvt. Ltd.
@@ -94,12 +137,24 @@
           </li>
             </ul>
           </li>
+          <li class="dropdown"> <a class="button1" href="#"> <span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i> </a>
+            <ul>
+              <li><a class="button button1" href="#">JavaScript</a></li>
+              <li> <a href="">Cyber Security And Bug bounty</a> </li>
+              <li> <a href="">Front-end</a> </li>
+              <li> <a href="">Backend</a> </li>
+              <li> <a href="">Full-stack</a> </li>
+            </ul>
+          </li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <a class="btn-getstarted" href="#about">Get Started</a>
+        <!-- <li class="dropdown"> <a class="btn-getstarted" href="#"> <span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i> </a>
+          <ul>
+            <li> <a href="">Cyber Security</a> </li>
+          </ul>
+        </li> -->
 
     </div>
   </header>
