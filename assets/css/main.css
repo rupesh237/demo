@@ -982,12 +982,36 @@ section,
   height: auto;
 }
 
+.clients .swiper-slide {
+  /* Add these styles to create the card effect */
+  background: #fff; /* White background for the card */
+  border-radius: 8px; /* Rounded corners for the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 15px; /* Padding inside the card */
+  text-align: center; /* Center the image within the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  display: flex; /* Use flexbox for vertical alignment */
+  align-items: center;
+  justify-content: center;
+  min-height: 130px; /* Ensure a minimum height for consistency */
+  min-width: 120px;
+}
+
+.clients .swiper-slide:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+
 .clients .swiper-slide img {
-  transition: 0.3s;
-  padding: 0 10px;
+  max-width: 100%; /* Ensure image doesn't overflow the card */
+  max-height: 80px; /* Limit image height if needed, adjust as necessary */
+  opacity: 0.8; /* Slightly reduce opacity */
+  transition: opacity 0.3s ease;
 }
 
 .clients .swiper-slide img:hover {
+  opacity: 1; /* Full opacity on hover */
   transform: scale(1.1);
 }
 
